@@ -1,0 +1,9 @@
+version: '1'
+services:
+  raspi-server:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    command: "npm start"
+    ports:
+     - "10000:10000"
