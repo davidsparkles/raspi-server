@@ -1,7 +1,7 @@
 set -e
 set -u
 
-LISTEN_PORT=10010
+LISTEN_PORT=10020
 NAME=raspi-server
 
 docker build -t "$NAME:$(git rev-parse HEAD)" .
