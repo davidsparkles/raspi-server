@@ -10,7 +10,3 @@ services:
       dockerfile: ./docker/Dockerfile
     env_file:
       - ./docker.env
-    deploy:
-      replicas: 1
-      restart_policy:
-        condition: on-failure
