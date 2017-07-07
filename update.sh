@@ -2,8 +2,16 @@ set -e
 set -u
 
 git pull
+# git submodule update --init
 
-NAME=raspi-server
+export LISTEN_PORT=8080
+export NAME=raspi-server
+export COLON_TAG=:$(git rev-parse HEAD)
+export RESGISTRY_SLASH=
 
-docker build -t "$NAME:$(git rev-parse HEAD)" .
-docker service update --image $NAME:$(git rev-parse HEAD) $NAME
+docker-compose -f docker/docker-compose.yml build
+#docker-compose -f docker/docker-compose.yml push
+
+cd docker
+docker stack deploy --compose-file docker-compose.yml $NAME
+cd ..
