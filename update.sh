@@ -4,7 +4,7 @@ set -u
 git pull
 # git submodule update --init
 
-export LISTEN_PORT=8080
+export LISTEN_PORT=80
 export NAME=raspi-server
 export COLON_TAG=:$(git rev-parse HEAD)
 export RESGISTRY_SLASH=

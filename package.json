@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "./node_modules/.bin/ts-node ./index.ts",
     "test": "mocha"
   },
   "repository": {
@@ -14,7 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.1"
+    "@types/express": "^4.0.36",
+    "express": "^4.14.1",
+    "ts-node": "^3.2.0",
+    "typescript": "^2.4.1"
   },
   "devDependencies": {
     "assert": "^1.4.1",
