@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "./node_modules/.bin/ts-node ./index.ts",
+    "run:dev": "nodemon --exec ts-node -- ./index.ts",
     "test": "mocha"
   },
   "repository": {
