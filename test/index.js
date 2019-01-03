@@ -12,3 +12,11 @@ describe('Server', () => {
 	    .expect(200, done)
 	})
 })
+
+describe('Dummy', () => {
+	it('can calculate', () => {
+		const actual = 2
+		const expected = 2
+		assert.strictEqual(actual, expected)
+	})
+})
